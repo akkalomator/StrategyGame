@@ -13,8 +13,8 @@ public class GameConfig {
     private String initialPositionFilePath;
 
     public GameConfig(int boardSize, int timeLimit, List<String> playersNames, String initialPositionFilePath) {
-
-        if (boardSize < 4) {
+        // TODO: Split into two: with initial position and with border size
+        if (boardSize < 4 && (initialPositionFilePath == null || initialPositionFilePath.isEmpty())) {
             throw new IllegalArgumentException("Board must be greater than 3, but " + boardSize + "was passed");
         }
 
@@ -22,6 +22,7 @@ public class GameConfig {
             throw new IllegalArgumentException("Time limit must be greater than 0, but " + timeLimit + "was passed");
         }
 
+        this.boardSize = boardSize;
         this.timeLimit = timeLimit;
         this.playersNames = playersNames;
         this.initialPositionFilePath = initialPositionFilePath;
@@ -37,5 +38,9 @@ public class GameConfig {
 
     public String getInitialPositionFilePath() {
         return initialPositionFilePath;
+    }
+
+    public int getBoardSize() {
+        return boardSize;
     }
 }

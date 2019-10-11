@@ -20,12 +20,16 @@ public class GameInfoImpl implements GameInfo {
     private PlayerColor currentPlayerColor;
 
     private int timeLimit;
-    
+
     private String lastMove;
+
+    GameInfoImpl() {
+
+    }
 
     public GameInfoImpl(List<String> players, int timeLimit) {
 
-        if(timeLimit <= 0) {
+        if (timeLimit <= 0) {
             throw new IllegalArgumentException("Time limit must be greater than 0, but " + timeLimit + "was passed");
         }
 
@@ -42,6 +46,10 @@ public class GameInfoImpl implements GameInfo {
         return players;
     }
 
+    void setPlayers(List<String> players) {
+        this.players = players;
+    }
+
     public GameStatus getGameStatus() {
         return gameStatus;
     }
@@ -54,7 +62,7 @@ public class GameInfoImpl implements GameInfo {
         return currentMove;
     }
 
-    public void setCurrentMove(int currentMove) {
+    void setCurrentMove(int currentMove) {
         this.currentMove = currentMove;
     }
 
@@ -62,7 +70,7 @@ public class GameInfoImpl implements GameInfo {
         return movePhase;
     }
 
-    public void setMovePhase(MovePhase movePhase) {
+    void setMovePhase(MovePhase movePhase) {
         this.movePhase = movePhase;
     }
 
@@ -70,7 +78,7 @@ public class GameInfoImpl implements GameInfo {
         return currentPlayerColor;
     }
 
-    public void setCurrentPlayerColor(PlayerColor currentPlayerColor) {
+    void setCurrentPlayerColor(PlayerColor currentPlayerColor) {
         this.currentPlayerColor = currentPlayerColor;
     }
 
@@ -78,11 +86,15 @@ public class GameInfoImpl implements GameInfo {
         return timeLimit;
     }
 
+    void setTimeLimit(int timeLimit) {
+        this.timeLimit = timeLimit;
+    }
+
     public String getLastMove() {
         return lastMove;
     }
 
-    public void setLastMove(String lastMove) {
+    void setLastMove(String lastMove) {
         this.lastMove = lastMove;
     }
 }

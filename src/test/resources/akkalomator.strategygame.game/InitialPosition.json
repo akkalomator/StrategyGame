@@ -1,0 +1,77 @@
+{
+  "date": "12.12.12 12:12",
+  "phase": "Preparation",
+  "timeLimit": 30,
+  "move": 12,
+  "size": 3,
+  "currentPlayer": "white",
+  "players": [
+    "P1",
+    "P2"
+  ],
+  "gameStatus": "NotFinished",
+  "board": [
+    [
+      {
+        "color": "white",
+        "points": [
+          [
+            true,
+            false,
+            true
+          ],
+          [
+            false,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            true
+          ]
+        ]
+      },
+      {
+        "color": "white",
+        "points": [
+          [
+            false,
+            false,
+            false
+          ],
+          [
+            false,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ]
+        ]
+      },
+      {
+        "color": "white",
+        "points": [
+          [
+            true,
+            false,
+            true
+          ],
+          [
+            false,
+            false,
+            false
+          ],
+          [
+            true,
+            false,
+            true
+          ]
+        ]
+      }
+    ]
+  ]
+}
